@@ -1,0 +1,19 @@
+.logo {
+    margin-left: 5px;
+    height: 6rem;
+    width: 6rem;
+    background-image: url("../media/Logo.jpg");
+    background-size: cover;
+}
+.label{
+    
+    font-size: 1.6rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* color: white; */
+
+}
+.nav{
+    cursor: pointer;
+    
+}
