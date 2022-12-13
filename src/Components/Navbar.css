@@ -1,8 +1,8 @@
 .logo {
-    margin-left: 5px;
-    height: 6rem;
-    width: 6rem;
-    background-image: url("../media/Logo.jpg");
+    margin-left: 10px;
+    height: 7rem;
+    width: 7rem;
+    background-image: url("../media/Logo.png");
     background-size: cover;
 }
 .label{

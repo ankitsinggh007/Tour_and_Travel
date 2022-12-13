@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button'
-import Logo from "../media/Logo.jpg";
+import Logo from "../media/Logo.png";
 import  "./Navbar.css";
 import { Link, useNavigate } from 'react-router-dom';
 import { authorization } from './Store/ContextApi';
