@@ -32,18 +32,26 @@
 .subtitle{
     font-weight: 400;
     margin-top: 20px;
-    margin-left:40px;
+    
+}
+.container1{
+    margin-left:5vw;
+    margin-right:5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
 }
 .subtitle1{
     display: flex;
     margin-top: 20px;
-    margin-left:40px;
     font-weight: 400;
     line-height: 20px;
     color: #5a555b;
 
 }
 .link{
-    margin-right: 5%;
-    
+    font-size: 1.5rem;
+    color:"#002984"
 }
