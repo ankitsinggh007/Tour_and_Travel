@@ -13,7 +13,24 @@ import {Grid,Button} from "@mui/material"
 import Site1 from "../media/Site1.jpg"
 import Site2 from "../media/Site2.jpg"
 import Site3 from "../media/Site3.jpg"
-
+import tripGuid from "../media/tripGuid.svg"
+import Connected from "../media/Connected .png"
+import Private from "../media/Private.png"
+import Help from "../media/Help.png"
+import Adventure from "../media/Adventure.png"
+import Beach from "../media/Beach.png"
+import Citytour from "../media/Citytour.png"
+import Cruise from "../media/Cruise.png"
+import Museums from "../media/Museums.png"
+import Wildlife from "../media/Wildlife.png"
+import Reviewer1 from "../media/Reviewer1.jpg"
+import Reviewer5 from "../media/Reviewer5.jpg"
+import Reviewer6 from "../media/Reviewer6.jpg"
+import Reviewer8 from "../media/Reviewer8.jpg"
+import Reviewer9 from "../media/Reviewer9.jpg"
+import Reviewer3 from "../media/Reviewer3.jpg"
+import Reviewer2 from "../media/Reviewer2.jpg"
+import Reviewer4 from "../media/Reviewer4.jpg"
 function Home() {
   const data=[
     {
@@ -47,6 +64,88 @@ function Home() {
     
     },
   ];
+  const whyWeAreBetter=[{
+    image:Connected,
+    title:"We make all process easy",
+    caption:"Our services include helping with booking hotels, arranging local transportation, and providing travel insurance."
+  },
+{
+  image:Private,
+  title:"Private & Customized Tour",
+  caption:"provide the opportunity to ask questions and receive answers from knowledgeable guides,to learn about culture,history of the area."
+},
+{
+  image:Help,
+  title:"Immigration & Passport Help",
+  caption:" Travel agents will be provide for assistance with immigration and passport help."
+}];
+const touType=[{
+  logo:Beach,
+  name:"Beach"
+},
+{
+  logo:Citytour,
+  name:"City tour"
+},{
+  logo:Wildlife,
+  name:"Wildlife"
+},{
+  logo:Adventure,
+  name:"Adventure"
+},{
+  logo:Cruise,
+  name:"Cruises"
+},];
+const review=[
+  {
+    review:"The tourist website had so much to offer – from discounts to helpful travel tips. I felt like I got the best value for my money.",
+    avatar:Reviewer8,
+    rating:5,
+    tourist_type:"traveller",
+  },
+  {
+    review:"“The service I received from this tourist website was top-notch. They were very helpful and made sure I had a pleasant experience.”",
+    avatar:Reviewer6,
+    rating:5,
+    tourist_type:"Tourist",
+  },
+  {
+    review:"“I was very pleased with the service I received from this tourist website. They had great customer service and made sure all my questions were answered.”",
+    avatar:Reviewer5,
+    rating:5,
+    tourist_type:"traveller",
+  },
+  {
+    review:"“The service I received from this tourist website was excellent! From the friendly customer service team to the helpful resources they provided, I had a wonderful experience.”",
+    avatar:Reviewer4,
+    rating:4,
+    tourist_type:"Tourist",
+  },
+  {
+    review:"The tourist website had so much to offer – from discounts to helpful travel tips. I felt like I got the best value for my money.",
+    avatar:Reviewer3,
+    rating:4,
+    tourist_type:"traveller",
+  },
+  {
+    review:"I had a great experience with the customer service at this website! They helped me find the perfect vacation package for me and gave me valuable advice along the way. Highly recommend!" ,
+    avatar:Reviewer1,
+    rating:5,
+    tourist_type:"Tourist",
+  },{
+    review:"The customer service at this website was amazing! They were so polit and sincere",
+    avatar:Reviewer2,
+    rating:4,
+    tourist_type:"traveller",
+  },
+  {
+    review:"The customer service at this website was amazing! They were so polit and sincere",
+    avatar:Reviewer9,
+    rating:5,
+    tourist_type:"traveller",
+  }
+
+]
   return (
     <>
     <div className={classes.homeSection} >
@@ -58,7 +157,7 @@ function Home() {
     <div><Typography variant='h2' className={classes.subtitle}>Our Best Tour</Typography>
     <Typography variant='subtitle1'  className={classes.subtitle1}>There are also locations where it's easy to feel healthier,happier <br/> and less stressed then daily chaos. And to more destinations on <br/> the Global Retirement index.</Typography>
    </div>
-    <Typography gutterBottom   align="right"><NavLink className={classes.link} to={"/"}>See All Tours</NavLink></Typography>
+    <Typography gutterBottom   ><NavLink className={classes.link} to={"/"}>See All Tours</NavLink></Typography>
     </div>
     <Grid container direction="row" spacing={10} style={{paddingLeft:"5vw",paddingRight:"5vw",paddingBottom:"10vh"}} >
    {data.map((obj,index)=>{
@@ -68,7 +167,7 @@ function Home() {
       <Card variant="outlined" >
         <CardMedia
           component="img"
-          height="250"
+          height="400"
           image={obj.image}
           alt="green iguana"
         />
@@ -87,15 +186,52 @@ function Home() {
               <span><TimelapseOutlinedIcon style={{marginRight:"10px"}}/>{obj.duration}</span>
         </CardContent>
         <CardActions style={{display:"inline"}}>
-          <Button  style={{ display:"inline",backgroundColor:"#211749",color:"white",borderRadius:"6rem",padding:"0.5rem",position:"relative",left:"75%"}}>Book Now</Button>
+          <Button  style={{ display:"inline",backgroundColor:"#211749",color:"white",borderRadius:"6rem",padding:"0.5rem",position:"relative",left:"75%",bottom:"40px"}}>Book Now</Button>
         </CardActions>
       </Card>
       </Grid>
     )
    })}
     </Grid>
-    <Grid container>
+    <Grid container style={{marginLeft:"5vw",marginRight:"5vw", width:"90vw", height:"80vh" }}>
+    <Grid item    sm={12} md={6} >
+      <img src={tripGuid} alt="story telling"  />
+      
+    </Grid>
+    <Grid item sm={12} md={6} style={{ height:"100%", display:"flex",flexDirection:"column",alignItems:"center",paddingTop:"65px"}} >
+      <Typography variant='h2' align="centre" color="#211749" gutterBottom >Why Choose Us?</Typography>
+      <Typography variant='subtitle1' align="centre" style={{width:"52%"}} gutterBottom  >We offer a wide range of tour packages to suit your needs, from budget-friendly trips to luxury holidays</Typography>
+      {whyWeAreBetter.map((obj,inedx)=>{
+        return(
+          <Grid container style={{ width:"85%",marginLeft:"5vw", marginTop:"17px", marginBottom:"17px" } }  >
+        <Grid item sm={2} md={2}>
+          <img src={obj.image} alt="Connected _logo" height="120px"/>
+        </Grid>
+        <Grid item sm={8} md={8}>
+          <Typography variant='h4' >{obj.title}</Typography>
+          <Typography variant='subtitle'>{obj.caption}</Typography>
+        </Grid>
+        </Grid>
+        )
 
+      })}  
+    </Grid>
+    </Grid>
+    <Grid  style={{marginLeft:"5vw",marginRight:"5vw", width:"90vw" ,paddingBottom:"50px"}}>
+    <Typography variant='h2' align='center' style={{marginTop:"15px"}}>Tour Type</Typography>
+
+    <div className={classes.container_types}>
+      {touType.map((obj,index)=>{
+        return(
+          <div style={{height:"120px",width:"120px",boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"} }>
+            <div >
+              <img src={obj.logo} alt="Logo" height="120" width="120px"/>
+            </div>
+            <Typography align="center" variant='h6'>{obj.name}</Typography>
+          </div>
+        )
+      })}
+    </div>
     </Grid>
   </>
   )

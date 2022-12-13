@@ -55,3 +55,9 @@
     font-size: 1.5rem;
     color:"#002984"
 }
+.container_types{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 150px;
+}
