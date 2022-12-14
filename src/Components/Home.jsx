@@ -7,6 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 import classes from "./Home.module.css";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
+import TextField from '@mui/material/TextField';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import {Grid,Button} from "@mui/material"
@@ -23,14 +24,8 @@ import Citytour from "../media/Citytour.png"
 import Cruise from "../media/Cruise.png"
 import Museums from "../media/Museums.png"
 import Wildlife from "../media/Wildlife.png"
-import Reviewer1 from "../media/Reviewer1.jpg"
-import Reviewer5 from "../media/Reviewer5.jpg"
-import Reviewer6 from "../media/Reviewer6.jpg"
-import Reviewer8 from "../media/Reviewer8.jpg"
-import Reviewer9 from "../media/Reviewer9.jpg"
-import Reviewer3 from "../media/Reviewer3.jpg"
-import Reviewer2 from "../media/Reviewer2.jpg"
-import Reviewer4 from "../media/Reviewer4.jpg"
+import Slider from "../Components/Slider"
+import Footer from './Footer';
 function Home() {
   const data=[
     {
@@ -96,56 +91,7 @@ const touType=[{
   logo:Cruise,
   name:"Cruises"
 },];
-const review=[
-  {
-    review:"The tourist website had so much to offer – from discounts to helpful travel tips. I felt like I got the best value for my money.",
-    avatar:Reviewer8,
-    rating:5,
-    tourist_type:"traveller",
-  },
-  {
-    review:"“The service I received from this tourist website was top-notch. They were very helpful and made sure I had a pleasant experience.”",
-    avatar:Reviewer6,
-    rating:5,
-    tourist_type:"Tourist",
-  },
-  {
-    review:"“I was very pleased with the service I received from this tourist website. They had great customer service and made sure all my questions were answered.”",
-    avatar:Reviewer5,
-    rating:5,
-    tourist_type:"traveller",
-  },
-  {
-    review:"“The service I received from this tourist website was excellent! From the friendly customer service team to the helpful resources they provided, I had a wonderful experience.”",
-    avatar:Reviewer4,
-    rating:4,
-    tourist_type:"Tourist",
-  },
-  {
-    review:"The tourist website had so much to offer – from discounts to helpful travel tips. I felt like I got the best value for my money.",
-    avatar:Reviewer3,
-    rating:4,
-    tourist_type:"traveller",
-  },
-  {
-    review:"I had a great experience with the customer service at this website! They helped me find the perfect vacation package for me and gave me valuable advice along the way. Highly recommend!" ,
-    avatar:Reviewer1,
-    rating:5,
-    tourist_type:"Tourist",
-  },{
-    review:"The customer service at this website was amazing! They were so polit and sincere",
-    avatar:Reviewer2,
-    rating:4,
-    tourist_type:"traveller",
-  },
-  {
-    review:"The customer service at this website was amazing! They were so polit and sincere",
-    avatar:Reviewer9,
-    rating:5,
-    tourist_type:"traveller",
-  }
 
-]
   return (
     <>
     <div className={classes.homeSection} >
@@ -233,6 +179,18 @@ const review=[
       })}
     </div>
     </Grid>
+    <Typography align="center" variant="h2" style={{marginTop:"20px"}}  >What Our Customer Say's About Us</Typography>
+    <Grid style={{marginTop:"150px"}}>
+
+    <Slider/>
+    </Grid>
+    <Grid className={classes.Subscription} style={{height:"70vh"}}>
+    <Typography variant='h1' align="center" gutterBottom>Save Time,Save Money!</Typography>
+    <Typography variant='subtitle1' align="center" gutterBottom style={{marginBottom:"10px",fontWeight:"bold" }}>subsbcribe to our site for amazing deals!</Typography>
+    <div style={{display:"flex", justifyContent:"center" }}><TextField id="outlined-basic" label="Email"  style={{width:"40%",borderRadius:"10px",backgroundColor:"white"}} variant="outlined" /><Button variant="contained" style={{fontSize:"1.4rem",backgroundColor:"#211749",borderRadius:"10px",marginLeft:"15px" }} >Subscribe</Button></div>
+    </Grid>
+      <Footer/>
+
   </>
   )
 }
