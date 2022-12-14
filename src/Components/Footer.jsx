@@ -12,7 +12,7 @@ function Footer() {
     <div className="container_footer">
         <div className="col-sm-12 col-md-6">
             <Typography variant='h6' color="white" >About</Typography>
-          <p className="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          <p className="text-justify">DreamTrip.com <i>DreamTrip </i>There we provide tours and travel packages around the world. Our mission is to make your travel experience as stress-free and enjoyable as possible. We understand that everyone’s needs are different and tailor our packages to suit your individual requirements. We have a team of knowledgeable, friendly staff that are passionate about travel and are available to offer advice and assistance to make your trip the best it can be. With our expertise and resources, we will help you choose the right package to suit your budget and needs. Whether you’re looking for a romantic getaway or an adventure of a lifetime, Tour and Travel can make it happen. Contact us today to start planning your dream vacation.</p>
         </div>
 
         
