@@ -1,0 +1,16 @@
+.button{
+   background-color:#211749;
+   border: none;
+   padding: 10px 15px;
+   text-decoration: none;
+   color: aliceblue;
+
+}
+.icon{
+    transform:translateX(0);
+    transition: all 1ms ease-in;
+}
+.icon:hover{
+    transform: translateX(3px);
+
+}

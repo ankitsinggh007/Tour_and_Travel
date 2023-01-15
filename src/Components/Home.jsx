@@ -52,7 +52,7 @@ function Home() {
       image:Site3,
       alt:"",
       Price:"12,000",
-      Name:"Sri Bhoga Nandishwara Gudi",
+      Name:"Sri Bhoga Nandishwara",
       Location:"SH 74,Nandi,Karnatka",
       Date:"oct 28 2022",
       duration:"10 days"
@@ -103,7 +103,7 @@ const touType=[{
     <div><Typography variant='h2' className={classes.subtitle}>Our Best Tour</Typography>
     <Typography variant='subtitle1'  className={classes.subtitle1}>There are also locations where it's easy to feel healthier,happier <br/> and less stressed then daily chaos. And to more destinations on <br/> the Global Retirement index.</Typography>
    </div>
-    <Typography gutterBottom   ><NavLink className={classes.link} to={"/"}>See All Tours</NavLink></Typography>
+    <Typography gutterBottom   ><NavLink className={classes.link} to={"/Places"}>See All Tours</NavLink></Typography>
     </div>
     <Grid container direction="row" spacing={10} style={{paddingLeft:"5vw",paddingRight:"5vw",paddingBottom:"10vh"}} >
    {data.map((obj,index)=>{
@@ -132,14 +132,13 @@ const touType=[{
               <span><TimelapseOutlinedIcon style={{marginRight:"10px"}}/>{obj.duration}</span>
         </CardContent>
         <CardActions style={{display:"inline"}}>
-          <Button  style={{ display:"inline",backgroundColor:"#211749",color:"white",borderRadius:"6rem",padding:"0.5rem",position:"relative",left:"75%",bottom:"40px"}}>Book Now</Button>
         </CardActions>
       </Card>
       </Grid>
     )
    })}
     </Grid>
-    <Grid container style={{marginLeft:"5vw",marginRight:"5vw", width:"90vw", height:"80vh" }}>
+    <Grid container style={{marginLeft:"5vw",marginRight:"5vw", width:"90vw", height:"auto" }}>
     <Grid item    sm={12} md={6} >
       <img src={tripGuid} alt="story telling"  />
       
@@ -151,10 +150,10 @@ const touType=[{
         return(
           <Grid container style={{ width:"85%",marginLeft:"5vw", marginTop:"17px", marginBottom:"17px" } }  >
         <Grid item sm={2} md={2}>
-          <img src={obj.image} alt="Connected _logo" height="120px"/>
+          <img src={obj.image} alt="Connected _logo" height="90px"/>
         </Grid>
         <Grid item sm={8} md={8}>
-          <Typography variant='h4' >{obj.title}</Typography>
+          <Typography variant='h5' >{obj.title}</Typography>
           <Typography variant='subtitle'>{obj.caption}</Typography>
         </Grid>
         </Grid>

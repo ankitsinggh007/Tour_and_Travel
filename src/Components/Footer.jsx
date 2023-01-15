@@ -12,7 +12,7 @@ function Footer() {
     <div className="container_footer">
         <div className="col-sm-12 col-md-6">
             <Typography variant='h6' color="white" >About</Typography>
-          <p className="text-justify">DreamTrip.com <i>DreamTrip </i>There we provide tours and travel packages around the world. Our mission is to make your travel experience as stress-free and enjoyable as possible. We understand that everyone’s needs are different and tailor our packages to suit your individual requirements. We have a team of knowledgeable, friendly staff that are passionate about travel and are available to offer advice and assistance to make your trip the best it can be. With our expertise and resources, we will help you choose the right package to suit your budget and needs. Whether you’re looking for a romantic getaway or an adventure of a lifetime, Tour and Travel can make it happen. Contact us today to start planning your dream vacation.</p>
+          <p className="text-justify">DreamTrip.com <i>DreamTrip </i>There we provide tours and travel packages around the world. Our mission is to make your travel experience as stress-free and enjoyable as possible. We understand that everyone’s needs are different and tailor our packages to suit your individual requirements. We have a team of knowledgeable, friendly staff that are passionate about travel and are available to offer advice and assistance to make your trip the best it can be. With our expertise and resources, we will help you choose the right package to suit your .</p>
         </div>
 
         

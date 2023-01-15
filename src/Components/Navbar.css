@@ -5,15 +5,25 @@
     background-image: url("../media/Logo.png");
     background-size: cover;
 }
-.label{
-    
+
+.label {
+
     font-size: 1.6rem;
     margin-left: 20px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     /* color: white; */
-
+    text-decoration: none;
+    color: black
 }
-.nav{
+.active{
+    text-decoration: underline;    
+}
+
+.nav {
     cursor: pointer;
-    
+    height: fit-content;
+    display: flex;
+    width: 98%;
+    margin: auto;
+
 }

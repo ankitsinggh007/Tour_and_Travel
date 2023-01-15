@@ -82,8 +82,8 @@ setMessage(LoginCredential.message);
                     Sign In
                 </Typography>
                 <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-                    {/* <Typography  component="h6" color={"red"} variant="h6" >{Message}</Typography> */}
-                    {Message.length != 0 && <Alert color="danger">
+                    <Typography  component="h6" color={"red"} variant="h6" >{Message}</Typography>
+                    {Message != "" && <Alert color="danger">
                         {Message}
                     </Alert>}
                     <Grid container spacing={2}>
@@ -114,10 +114,7 @@ setMessage(LoginCredential.message);
 
                             />
                         </Grid>
-                        <Grid item style={{marginLeft:"35%"}}>
-                        or sign in with<br/>
-                        <FcGoogle onClick={signinwith_Google} style={{marginLeft:"30%"}} fontSize={"2.5rem"}/>
-                    </Grid>
+                       
                     </Grid>
                     <Button
                         type="submit"

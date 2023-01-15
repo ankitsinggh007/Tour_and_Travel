@@ -1,0 +1,46 @@
+.root{
+    border: 1px solid black;
+    height: 70vh;
+    width: 40vw;
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
+}
+.root div{
+    margin: 10px 0px;
+}
+.root{
+    background-image:url("https://pix10.agoda.net/geo/city/4923/1_4923_02.jpg?ca=8&ce=1&s=1920x822") ;
+    background-size: cover;
+}
+.check{
+    width: 230px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.3rem;
+    border: .1px solid black;
+    height: 40px;
+    margin: 5px 0px;
+}
+label{
+    display: block;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.Duration{
+    display: flex;
+    justify-content: space-between;
+}
+.submit{
+    display: block;
+    margin-top: 20px;
+    background-color:#211749 ;
+    border: none;
+}
+.Disabled{
+    display: block;
+    margin-top: 20px;
+    background-color:grey ;
+    border: none;
+}

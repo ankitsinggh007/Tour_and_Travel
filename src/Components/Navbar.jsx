@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button'
 import Logo from "../media/Logo.png";
 import  "./Navbar.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link,NavLink, useNavigate } from 'react-router-dom';
 import { authorization } from './Store/ContextApi';
 import { useContext,useState,useEffect } from 'react';
 
@@ -16,31 +16,32 @@ function ColorSchemesExample() {
     setisA(LoginCredential.isAuthrized)
 
   }, [LoginCredential.isAuthrized])
+  const LoggedIn=()=>{
+    if(LoginCredential.isAuthrized){
+      setLoginCredential({
+        id:"",firstName:"",firstName:"",email:"",isAuthrized:false,Cart:[]
+      })
+      Navigate("/")
+
+    }
+    else{
+      Navigate("/login")
+    }
+  }
   return (
     <>
       <Navbar bg="light"  className='nav' variant="light">
         <div className="logo" onClick={()=>{Navigate("/")}}>
             
-        </div>
+        </div> 
         <Container>
           <Nav style={{ width: '150%' }} className="me-auto flex ">
-            <li onClick={()=>{Navigate("/")}} className="label">Home</li>
-            <li className="label">Service</li>
-            <li className="label">Top Deals</li>
-            <li className="label">Gallery</li>
-            <li className="label">Contact</li>
+            <NavLink to={"/Places"}activeClassName="ative" className="label">Places</NavLink>
+            <NavLink to='/Gallery' className="label">Gallery</NavLink>
+            <NavLink to="/Contact" className="label">Contact</NavLink>
           </Nav>
-          {!isA && <Link to={"/login"}><Button className="loginButton" style={{backgroundColor:"#211749",width:"120%",paddingBottom:"10px"}} className='label' >Login</Button></Link>
-}
-{isA && <Link onCLick={()=>{setLoginCredential({
-  email:"",
-  password:"",
-  message:"",
-  object:null,
-  isAuthrized:false,
+    <Button className="loginButton" onClick={LoggedIn} style={{backgroundColor:"#211749",width:"130px",marginRight:"60px",paddingBottom:"10px"}} className='label' >{LoginCredential.isAuthrized?"Log Out":"Sign In"}</Button>
 
-});Navigate("/login")}}  to={"/login"}><Button className="loginButton" style={{backgroundColor:"#211749",width:"120%",paddingBottom:"10px"}} >Logout</Button></Link>
-}
         </Container>
       </Navbar>
     </>

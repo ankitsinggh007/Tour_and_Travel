@@ -1,0 +1,18 @@
+.caption{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    font-weight: 500;
+    z-index: 20;
+    left: 5px;
+    font-size: 1.1rem;
+    /* display: none; */
+}
+.box{
+    position: relative;
+}
+
+.none{
+    /* display: none; */
+}
+
