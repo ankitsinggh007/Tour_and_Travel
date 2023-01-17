@@ -3,16 +3,17 @@ import React from 'react'
 import Hotel from "../Components/Hotel"; 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect,useContext } from "react";
 import { authorization } from "../Components/Store/ContextApi";
 import { doc, updateDoc } from "firebase/firestore";
 import db from "../Database";
+import Swal from "sweetalert2";
 
 function FormDisabledExample() {
   const {LoginCredential,setLoginCredential }=useContext(authorization);
-   
+   const Navigate=useNavigate()
     const {site,id}=useParams();
     const place=site.replaceAll(" ","_");
     let array=Hotel[place];
@@ -51,11 +52,22 @@ array=array.filter(obj=>obj.id==id);
         Cart:obj.Cart,
     })
     setBookNowState("BOOKED");
-    setBooking({
-        place:"",
-        checkin:"",
-        checkout:"",
-        phone:"",  });
+  await    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: `your Booking for ${Booking.place } has been booked see you on ${Booking.checkin} day`,
+      showConfirmButton: true,
+    })
+    Navigate("/")
+  }
+  else{
+    await Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: "Please log in ",
+      showConfirmButton: true,
+    })
+Navigate("/login")
   }
    }
 
